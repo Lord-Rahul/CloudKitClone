@@ -10,24 +10,32 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
+        :root {
+            --brand: #4B4EFC;
+            --brand-dark: #14133A;
+            --bg-soft: #F5F6FB;
+        }
+
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             color: #222;
         }
+
         .navbar-brand {
             font-weight: 700;
             color: var(--brand-dark) !important;
         }
+        
 
         .btn-brand {
             background: var(--brand);
-            color: #403af8;
+            color: #fff;
             border-radius: 8px;
         }
 
         .btn-brand:hover {
             background: #3739d1;
-            color: #faf6f6;
+            color: #fff;
         }
 
         .hero {
@@ -41,7 +49,7 @@
         }
 
         .badge-soft {
-            background: #f0f0f7;
+            background: #EDEEFF;
             color: var(--brand);
             border-radius: 30px;
             padding: 6px 16px;
@@ -53,8 +61,7 @@
             height: 56px;
             border-radius: 14px;
             background: var(--brand);
-            color: #f7f9f7;
-            background-color: #4b45fd;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,8 +74,7 @@
             height: 40px;
             border-radius: 50%;
             background: var(--brand-dark);
-            color: #fffdfd;
-            background-color: #222;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -229,6 +235,142 @@
         </div>
     </section>
 
+    <!-- Pricing -->
+    <section class="py-5" id="pricing"> 
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Flexible pricing plans</h2>
+                <p class="text-muted">Choose the plan that fits your needs.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="pricing-card p-4 h-100">
+                        <h6 class="text-uppercase text-muted">Free plan</h6>
+                        <div class="price">$0<span class="fs-6 text-muted">/mo</span></div>
+                        <a href="#" class="btn btn-outline-dark w-100 my-3">Get Started</a>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10GB storage</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Basic file sharing
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Single device sync
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card popular p-4 h-100">
+                        <span class="badge bg-brand" style="background:var(--brand)">Most Popular</span>
+                        <h6 class="text-uppercase text-muted mt-2">Pro plan</h6>
+                        <div class="price">$29<span class="fs-6 text-muted">/mo</span></div>
+                        <a href="#" class="btn btn-brand w-100 my-3">Get Started</a>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1TB high-speed
+                                storage</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Multi-device sync
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Priority support
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card p-4 h-100">
+                        <h6 class="text-uppercase text-muted">Business plan</h6>
+                        <div class="price">$59<span class="fs-6 text-muted">/mo</span></div>
+                        <a href="#" class="btn btn-outline-dark w-100 my-3">Get Started</a>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited storage
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Team collaboration
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dedicated manager
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS (Bootstrap Carousel) -->
+    <section class="py-5 bg-light" id="testimonials">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">What they say!</h2>
+            <div id="testiCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                    <div class="carousel-item active">
+                        <p class="fst-italic">"This cloud storage solution transformed how I manage my files. The
+                            security and ease of access are unmatched!"</p>
+                        <h6 class="fw-bold mb-0">John D.</h6>
+                        <small class="text-muted">Small business owner</small>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="fst-italic">"With unlimited storage, I can safely store my high-resolution images and
+                            access them from anywhere."</p>
+                        <h6 class="fw-bold mb-0">Carlos J.</h6>
+                        <small class="text-muted">IT Manager</small>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="fst-italic">"The integration with my favorite tools streamlined my whole workflow.
+                            Couldn't run my business without it!"</p>
+                        <h6 class="fw-bold mb-0">Lisa W.</h6>
+                        <small class="text-muted">Entrepreneur</small>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testiCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testiCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="py-5">
+        <div class="container">
+            <div class="cta-section text-center py-5 px-3">
+                <h2 class="fw-bold">Take the leap to better storage</h2>
+                <p class="col-lg-6 mx-auto" style="color:#cfcfe6;">
+                    Start your journey to secure, reliable, and seamless cloud storage now.
+                </p>
+                <a href="#" class="btn btn-light btn-lg px-4">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-white">☁ CloudNest</h5>
+                    <p class="small">Secure, reliable cloud storage for individuals and teams.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white">Pages</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white">Newsletter</h6>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-brand">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="small text-center mb-0">© 2026 CloudNest. Built with Bootstrap 5.</p>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
