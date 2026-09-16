@@ -26,7 +26,6 @@
             color: var(--brand-dark) !important;
         }
 
-
         .btn-brand {
             background: var(--brand);
             color: #fff;
@@ -48,35 +47,100 @@
             background-size: cover;
             overflow: hidden;
             justify-content: center;
-            
-            
         }
-        .navbar{
+
+        h1 {
+            font-weight: 600;
+            color: oklch(0.129 0.042 264.695);
+            font-size: 90px;
+            line-height: 117px;
+            font-family: Interdisplay, Arial, sans-serif;
+        }
+
+        .navbar {
             position: absolute;
             align-items: center;
             position: fixed;
             top: 35px;
             margin: auto;
-            width: 48%;
-            height: 55px;
-            left: 26%;
+            width: 60%;
+            height: 75px;
+            left: 20%;
             font-weight: 500;
-            font-size: small;  
-            background-color: rgba(254, 253, 253, 0.792);
-            backdrop-filter: blur(4px);
-            border: 5px solid rgba(0, 0, 0, 0.09);
-            overflow: hidden;
+            font-size: medium;
+            background-color: #fdfdfdbb;
+            backdrop-filter: blur(5px);
+            border: 5px solid rgba(0, 0, 0, 0.115);
+
         }
 
-        .hero h1 {
-            font-weight: 700;
-            font-size: 3rem;
+        .navbar-border {
+            backdrop-filter: blur(0.5px);
+            color: #14133A;
         }
-        .hero img{
+
+        .hero img {
             width: 80%;
             margin-left: 10%;
             margin-top: 5%;
-            
+
+        }
+
+        .hero-des {
+            font-family: "DM Sans", sans-serif;
+            font-weight: 500;
+            color: oklch(0.129 0.042 264.695);
+            font-size: 20px;
+            line-height: 30px;
+        }
+        #grad-border{
+            height: 100px;
+            background-image: linear-gradient(#BAD6F0,white);
+        }
+
+        .marquee {
+            overflow: hidden;
+            /* fade edges so logos don't hard-cut at the sides */
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            width: 76%;
+            position: absolute;
+            left: 12%;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            /* let it be as wide as its content, no wrapping */
+            gap: 4rem;
+            animation: scroll 20s linear infinite;
+        }
+
+        /* pause on hover, nice UX touch */
+        .marquee:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(-10%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+
+            /* exactly half = one full set */
+        }
+
+
+        .carousel p {
+            font-family: "DM Sans", sans-serif;
+            font-weight: 500;
+            color: oklch(0.129 0.042 264.695);
+            font-size: 20px;
+            line-height: 30px;
+
         }
 
         .badge-soft {
@@ -88,6 +152,10 @@
             border: 1px solid rgba(0, 0, 0, 0.068);
             font-size: small;
             font-weight: 500;
+        }
+
+        #features {
+            margin-top: 14%;
         }
 
         .feature-icon {
@@ -161,7 +229,7 @@
 
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg  shadow-sm sticky-top rounded-3">
+    <nav class="navbar navbar-expand-lg  shadow-sm sticky-top rounded-4">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="/frontend/logo.svg" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -186,8 +254,9 @@
     <section class="hero" id="home">
         <div class="container text-center">
             <span class="badge-soft mb-3 mt-5 d-inline-block text-dark">⚡The future of cloud storage</span>
+            <!-- class="display-1 fw-medium text-dark" -->
             <h1>Your secure space<br>in the cloud</h1>
-            <p class="lead text-muted col-lg-6 mx-auto">
+            <p class="hero-des">
                 Unmatched cloud storage with top security, seamless integrations,
                 and flexible plans. Take control today.
             </p>
@@ -199,8 +268,42 @@
         <img src="/frontend/cloudkit.png" alt="cloudkit">
     </section>
 
+    <!-- Gradient-->
+     <div class="container-fluid" id="grad-border">
+        
+
+     </div>
+
+    <!-- Carousel-->
+
+    <section class="carousel">
+        <div class="text-center mt-5 mb-5 fw-bold h4">Preferred by top brands across the globe</div>
+        <div class="marquee ">
+            <div class="marquee-track">
+                <!-- original set -->
+                <div class="logo"><img src="/frontend/carousals/cgrapho.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/clogique.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/coptimal.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/cemblem.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/cvisually.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/ciconic.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/cwayline.svg" alt=""></div>
+                <!-- duplicate set (must be identical, same order) -->
+                <div class="logo"><img src="/frontend/carousals/cgrapho.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/clogique.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/coptimal.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/cemblem.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/cvisually.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/ciconic.svg" alt=""></div>
+                <div class="logo"><img src="/frontend/carousals/cwayline.svg" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+
     <!--Features -->
-    <section class="py-5" id="features">
+    <section class="pt-5" id="features">
+
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Powerful features</h2>
@@ -271,7 +374,7 @@
     </section>
 
     <!-- Pricing -->
-    <section class="py-5" id="pricing"> 
+    <section class="py-5" id="pricing">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Flexible pricing plans</h2>
