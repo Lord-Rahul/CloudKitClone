@@ -76,7 +76,7 @@
 
         .navbar-border {
             backdrop-filter: blur(0.5px);
-            color: #14133A;
+            color: #14133a;
         }
 
         .hero img {
@@ -157,19 +157,18 @@
         #features {
             margin-top: 14%;
         }
-
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            background: var(--brand);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
+        .feature-icon img{
+            object-fit: conatin;
+            border: 2px solid #F1F5F9;
+            border-radius: 20px;
+            background-size: contain;
+            
         }
+        #cardes{
+            background-image: linear-gradient(#F1F5F9,white);
+        }
+        
+        
 
         .step-number {
             width: 40px;
@@ -304,45 +303,45 @@
     <!--Features -->
     <section class="pt-5" id="features">
 
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Powerful features</h2>
+        <div class="container-sm">
+            <div class="mb-5">
+                <h2 class="fw-bold ">Powerful features</h2>
                 <p class="text-muted">Everything you need to manage your files with confidence.</p>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="p-4 border rounded-4 h-100">
-                        <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
-                        <h5>Collaboration made easy</h5>
+            <div class="row g-5">
+                <div class="col-md-4 col-lg-6">
+                    <div class="p-2 border rounded-4 h-100" id="cardes">
+                        <div class="feature-icon"   ><img class="img-thumbnail "  src="/frontend/cardImages/card1.png" alt=""></div>
+                        <h5 class="mt-4 mb-3">Collaboration made easy</h5>
                         <p class="text-muted mb-0">Share files and work with your team in real time, wherever they are.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="p-4 border rounded-4 h-100">
-                        <div class="feature-icon"><i class="bi bi-arrow-repeat"></i></div>
-                        <h5>Auto backup &amp; recovery</h5>
+                <div class="col-md-4 col-lg-6">
+                    <div class="p-2 border rounded-4 h-100" id="cardes">
+                        <div class="feature-icon"  ><img class="img-thumbnail" src="/frontend/cardImages/card2.png" alt=""></div>
+                        <h5 class="mt-4 mb-3"></h5>>Auto backup &amp; recovery</h5>
                         <p class="text-muted mb-0">Protect your data with automated backups and instant recovery.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border rounded-4 h-100">
-                        <div class="feature-icon"><i class="bi bi-bar-chart-fill"></i></div>
-                        <h5>Advanced analytics</h5>
+                    <div class="p-2 border rounded-4 h-100" id="cardes" >
+                        <div class="feature-icon" ><img src="/frontend/cardImages/card3.png" class="img-thumbnail" alt=""></div>
+                        <h5 class="mt-4 mb-3"></h5>>Advanced analytics</h5>
                         <p class="text-muted mb-0">Gain insight into your storage usage and optimize it easily.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border rounded-4 h-100">
-                        <div class="feature-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-                        <h5>Fast &amp; reliable</h5>
+                    <div class="p-2 border rounded-4 h-100" id="cardes" >
+                        <div class="feature-icon" ><img src="/frontend/cardImages/card4.png" class="img-thumbnail" alt=""> </div>
+                        <h5 class="mt-4 mb-3"></h5>>Fast &amp; reliable</h5>
                         <p class="text-muted mb-0">Enjoy lightning-fast uploads, downloads, and syncing.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 border rounded-4 h-100">
-                        <div class="feature-icon"><i class="bi bi-shield-lock-fill"></i></div>
-                        <h5>Enhanced security</h5>
+                    <div class="p-2 border rounded-4 h-100" id="cardes" >
+                        <div class="feature-icon" ><img src="/frontend/cardImages/card5.png" class="img-thumbnail" alt=""></div>
+                        <h5 class="mt-4 mb-3"></h5>>Enhanced security</h5>
                         <p class="text-muted mb-0">Manage permissions with precision to keep data safe.</p>
                     </div>
                 </div>
