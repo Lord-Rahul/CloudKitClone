@@ -41,7 +41,7 @@
             background: var(--bg-soft);
             padding: 100px 0 80px;
             position: relative;
-            background: url("bg.png");
+            background: url("backgroundImages/bg.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -93,9 +93,20 @@
             font-size: 20px;
             line-height: 30px;
         }
-        #grad-border{
+
+        #grad-border {
             height: 100px;
-            background-image: linear-gradient(#BAD6F0,white);
+            background-image: linear-gradient(#BAD6F0, white);
+        }
+
+        #grad-border2 {
+            height: 100px;
+            background-image: linear-gradient(white, #ABC8E7);
+        }
+
+        #grad-border3 {
+            height: 100px;
+            background-image: linear-gradient(#ABC8E7, white);
         }
 
         .marquee {
@@ -155,31 +166,73 @@
         }
 
         #features {
-            margin-top: 14%;
+            /* margin-top: 14%;
+            margin-bottom: 12%; */
+            margin: 14% auto 8% auto;
+            justify-content: center;
+            align-items: center;
+            width: 78%;
+            /* width: 78%;
+            position: absolute;
+            left: 11%; */
+
         }
-        .feature-icon img{
+
+        .feature-icon img {
             object-fit: conatin;
             border: 2px solid #F1F5F9;
             border-radius: 20px;
             background-size: contain;
-            
+
         }
-        #cardes{
-            background-image: linear-gradient(#F1F5F9,white);
+
+        #cardes {
+            background-image: linear-gradient(#F1F5F9, white);
         }
-        
-        
+
+        #how-icon {
+            width: 78%;
+            margin: 4% auto 1% auto;
+        }
+
 
         .step-number {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--brand-dark);
+            width: 20%;
+            height: 45%;
+            border-radius: 20%;
+            background: linear-gradient(var(--brand-dark), white);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
+        }
+
+        #demo-img {
+            overflow: hidden;
+            width: 70%;
+
+
+        }
+
+        #cloud-storage {
+            background: #ABC8E7;
+            height: 100vh;
+
+        }
+
+
+        #cloud-storage-img {
+            justify-content: center;
+            width: 82%;
+
+        }
+
+        #cloud-cards {
+            justify-content: center;
+            height: 55vh;
+            background: #ABC8E7;
+            padding-top: 8%;
         }
 
         .pricing-card {
@@ -264,14 +317,12 @@
                 <a href="#" class="btn btn-outline-dark btn-lg px-4">Secure your data</a>
             </div>
         </div>
-        <img src="/frontend/cloudkit.png" alt="cloudkit">
+        <img src="/frontend/backgroundImages/cloudkit.png" alt="cloudkit">
     </section>
 
     <!-- Gradient-->
-     <div class="container-fluid" id="grad-border">
-        
-
-     </div>
+    <div class="container-fluid" id="grad-border">
+    </div>
 
     <!-- Carousell-->
 
@@ -300,7 +351,7 @@
     </section>
 
 
-    <!--Features -->
+    <!--Features (Cards) -->
     <section class="pt-5" id="features">
 
         <div class="container-sm">
@@ -311,7 +362,8 @@
             <div class="row g-5">
                 <div class="col-md-4 col-lg-6">
                     <div class="p-2 border rounded-4 h-100" id="cardes">
-                        <div class="feature-icon"   ><img class="img-thumbnail "  src="/frontend/cardImages/card1.png" alt=""></div>
+                        <div class="feature-icon"><img class="img-thumbnail " src="/frontend/cardImages/card1.png"
+                                alt=""></div>
                         <h5 class="mt-4 mb-3">Collaboration made easy</h5>
                         <p class="text-muted mb-0">Share files and work with your team in real time, wherever they are.
                         </p>
@@ -319,29 +371,33 @@
                 </div>
                 <div class="col-md-4 col-lg-6">
                     <div class="p-2 border rounded-4 h-100" id="cardes">
-                        <div class="feature-icon"  ><img class="img-thumbnail" src="/frontend/cardImages/card2.png" alt=""></div>
-                        <h5 class="mt-4 mb-3"></h5>>Auto backup &amp; recovery</h5>
+                        <div class="feature-icon"><img class="img-thumbnail" src="/frontend/cardImages/card2.png"
+                                alt=""></div>
+                        <h5 class="mt-4 mb-3"></h5>Auto backup &amp; recovery</h5>
                         <p class="text-muted mb-0">Protect your data with automated backups and instant recovery.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-2 border rounded-4 h-100" id="cardes" >
-                        <div class="feature-icon" ><img src="/frontend/cardImages/card3.png" class="img-thumbnail" alt=""></div>
-                        <h5 class="mt-4 mb-3"></h5>>Advanced analytics</h5>
+                    <div class="p-2 border rounded-4 h-100" id="cardes">
+                        <div class="feature-icon"><img src="/frontend/cardImages/card3.png" class="img-thumbnail"
+                                alt=""></div>
+                        <h5 class="mt-4 mb-3"></h5>Advanced analytics</h5>
                         <p class="text-muted mb-0">Gain insight into your storage usage and optimize it easily.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-2 border rounded-4 h-100" id="cardes" >
-                        <div class="feature-icon" ><img src="/frontend/cardImages/card4.png" class="img-thumbnail" alt=""> </div>
-                        <h5 class="mt-4 mb-3"></h5>>Fast &amp; reliable</h5>
+                    <div class="p-2 border rounded-4 h-100" id="cardes">
+                        <div class="feature-icon"><img src="/frontend/cardImages/card4.png" class="img-thumbnail"
+                                alt=""> </div>
+                        <h5 class="mt-4 mb-3"></h5>Fast &amp; reliable</h5>
                         <p class="text-muted mb-0">Enjoy lightning-fast uploads, downloads, and syncing.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-2 border rounded-4 h-100" id="cardes" >
-                        <div class="feature-icon" ><img src="/frontend/cardImages/card5.png" class="img-thumbnail" alt=""></div>
-                        <h5 class="mt-4 mb-3"></h5>>Enhanced security</h5>
+                    <div class="p-2 border rounded-4 h-100" id="cardes">
+                        <div class="feature-icon"><img src="/frontend/cardImages/card5.png" class="img-thumbnail"
+                                alt=""></div>
+                        <h5 class="mt-4 mb-3"></h5>Enhanced security</h5>
                         <p class="text-muted mb-0">Manage permissions with precision to keep data safe.</p>
                     </div>
                 </div>
@@ -349,28 +405,164 @@
         </div>
     </section>
 
-    <!--     How It Works -->
-    <section class="py-5 bg-light">
+    <!-- How It Works -->
+    <section class="py-5">
         <div class="container">
-            <div class="row g-4 text-center">
+            <h5 class="text-center h1 fw-bold mb-5">Get started wiyhout Hassle !</h5>
+            <div class="row g-4 text-center" id="how-icon">
                 <div class="col-md-4">
-                    <div class="step-number mx-auto mb-3">1</div>
-                    <h5>Sign up instantly</h5>
-                    <p class="text-muted">Just a few details and you're ready to go.</p>
+                    <div class="step-number mx-auto mb-3"><i class="bi bi-person-plus-fill"></i></div>
+                    <h5>1. Sign up instantly</h5>
+                    <p class="text-muted fw-medium">Just a few details and you're ready to go.</p>
                 </div>
                 <div class="col-md-4">
-                    <div class="step-number mx-auto mb-3">2</div>
-                    <h5>Upload &amp; organize</h5>
-                    <p class="text-muted">Drag and drop files with simple, intuitive tools.</p>
+                    <div class="step-number mx-auto mb-3"><i class="bi bi-file-earmark-arrow-up"></i></div>
+                    <h5>2. Upload &amp; organize</h5>
+                    <p class="text-muted fw-medium">Drag and drop files with simple, intuitive tools.</p>
                 </div>
                 <div class="col-md-4">
-                    <div class="step-number mx-auto mb-3">3</div>
-                    <h5>Access on the go</h5>
-                    <p class="text-muted">Get your files from any device, anywhere.</p>
+                    <div class="step-number mx-auto mb-3"><i class="bi bi-emoji-smile"></i></div>
+                    <h5>3. Access on the go</h5>
+                    <p class="text-muted fw-medium">Get your files from any device, anywhere.</p>
+                </div>
+                <div class=" d-flex justify-content-center align-items-center gap-5 py-5 my-5 px-3">
+
+                    <!-- Card 1 -->
+                    <div class="d-flex align-items-start gap-3">
+                        <img src="/frontend/how-icons/how-icon.svg" alt="">
+                        <div>
+                            <span
+                                class="badge bg-light border border-secondary-subtle text-dark fw-semibold px-3 py-2 rounded-2">
+                                <span class="text-warning">★</span> 4.5 / 5.0
+                            </span>
+                            <p class="text-secondary small mb-0 mt-2">Rating by 458 users</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="d-flex align-items-start gap-3">
+                        <span class="text-white fs-3 fw-bold lh-1 mt-1"><img src="/frontend/how-icons/how-icon2.svg"
+                                alt=""></span>
+                        <div>
+                            <span
+                                class="badge bg-light border border-secondary-subtle text-dark fw-semibold px-3 py-2 rounded-2">
+                                <span class="text-warning">★</span> 4.0 / 5.0
+                            </span>
+                            <p class="text-secondary small mb-0 mt-2">Rating by 359 users</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
     </section>
+
+    <!-- demo img-->
+    <div class="container py-5 border border-5 rounded-4 border-opacity-100 " id="demo-img">
+        <img class="img-fluid" src="/frontend/backgroundImages/Screenshot 2026-09-17 115529.png" alt="logo">
+    </div>
+
+    <!-- Gradient-border 2 -->
+    <div class="container-fluid mt-5" id="grad-border2">
+    </div>
+
+    <!--Cloud storage -->
+    <div class="container-fluid " id="cloud-storage">
+        <div class="container-sm">
+            <h3 class="text-center h1 fw-bold">Cloud Storage Potential</h3>
+        </div>
+        <div class="text-center text-muted py-4 fw-medium">Experience the ultimate in data management with
+            features<br>designed to simplify, secure,
+            and accelerate your storage needs.
+        </div>
+        <div class="container" id="cloud-storage-img">
+            <img class="img-fluid " src="/frontend/backgroundImages/cloud-storage-card.png" alt="">
+
+        </div>
+    </div>
+
+    <!--Cloud storage cards -->
+
+    <div class="container-fluid " id="cloud-cards">
+
+        <!-- Announcement pill -->
+        <div class="d-flex justify-content-center mb-5">
+            <div
+                class="bg-dark bg-opacity-10 border rounded-4 border-dark border-opacity-10 px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm">
+                <span class="text-dark">Experience cloud storage like never before!</span>
+                <a href="#"
+                    class="text-dark fw-semibold text-decoration-underline d-inline-flex align-items-center gap-1">
+                    Try for free
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Feature grid -->
+        <div class="container">
+            <div class="row text-center gy-4">
+
+                <div class="col-6 col-md-3">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1b2430" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                        <polyline points="23 4 23 10 17 10" />
+                        <polyline points="1 20 1 14 7 14" />
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                    </svg>
+                    <h5 class="fw-bold text-dark">Automatic backup</h5>
+                    <p class="text-secondary small px-2">Never lose important files with automated, scheduled backups.
+                    </p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1b2430" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                    <h5 class="fw-bold text-dark">Advanced file sharing</h5>
+                    <p class="text-secondary small px-2">Share large files securely with customizable permissions and
+                        expiration dates.</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1b2430" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="6" x2="12" y2="18" />
+                        <path
+                            d="M15 9.5c0-1.38-1.34-2.5-3-2.5s-3 1.12-3 2.5 1.34 2.5 3 2.5 3 1.12 3 2.5-1.34 2.5-3 2.5-3-1.12-3-2.5" />
+                    </svg>
+                    <h5 class="fw-bold text-dark">Cost-effective plans</h5>
+                    <p class="text-secondary small px-2">Choose from flexible pricing options that fit your budget and
+                        storage requirements.</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1b2430" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                        <path
+                            d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                    </svg>
+                    <h5 class="fw-bold text-dark">24/7 Support</h5>
+                    <p class="text-secondary small px-2">Get help anytime with our dedicated customer support team,
+                        available around the clock.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Gradient-Border 3-->
+    <div class="container-fluid" id="grad-border3">
+    </div>
 
     <!-- Pricing -->
     <section class="py-5" id="pricing">
@@ -386,10 +578,13 @@
                         <div class="price">$0<span class="fs-6 text-muted">/mo</span></div>
                         <a href="#" class="btn btn-outline-dark w-100 my-3">Get Started</a>
                         <ul class="list-unstyled small text-muted">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10GB storage</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Basic file sharing
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10GB storage
                             </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Single device sync
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Basic file
+                                sharing
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Single device
+                                sync
                             </li>
                         </ul>
                     </div>
@@ -403,9 +598,11 @@
                         <ul class="list-unstyled small text-muted">
                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1TB high-speed
                                 storage</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Multi-device sync
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Multi-device
+                                sync
                             </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Priority support
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Priority
+                                support
                             </li>
                         </ul>
                     </div>
@@ -416,11 +613,14 @@
                         <div class="price">$59<span class="fs-6 text-muted">/mo</span></div>
                         <a href="#" class="btn btn-outline-dark w-100 my-3">Get Started</a>
                         <ul class="list-unstyled small text-muted">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited storage
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited
+                                storage
                             </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Team collaboration
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Team
+                                collaboration
                             </li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dedicated manager
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dedicated
+                                manager
                             </li>
                         </ul>
                     </div>
@@ -442,7 +642,8 @@
                         <small class="text-muted">Small business owner</small>
                     </div>
                     <div class="carousel-item">
-                        <p class="fst-italic">"With unlimited storage, I can safely store my high-resolution images and
+                        <p class="fst-italic">"With unlimited storage, I can safely store my high-resolution images
+                            and
                             access them from anywhere."</p>
                         <h6 class="fw-bold mb-0">Carlos J.</h6>
                         <small class="text-muted">IT Manager</small>
